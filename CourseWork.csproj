@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ABCpdf" Version="12.5.1" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.20.0" />
+    <PackageReference Include="EPPlus" Version="6.2.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.10" />
+    <PackageReference Include="Spire.Doc" Version="11.8.18" />
+    <PackageReference Include="System.IO.Packaging" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Countries\Create.cshtml" />
+    <None Include="Views\Countries\Delete.cshtml" />
+    <None Include="Views\Countries\Details.cshtml" />
+    <None Include="Views\Countries\Edit.cshtml" />
+    <None Include="Views\Countries\Index.cshtml" />
+    <None Include="Views\ProductTs\Create.cshtml" />
+    <None Include="Views\ProductTs\Delete.cshtml" />
+    <None Include="Views\ProductTs\Details.cshtml" />
+    <None Include="Views\ProductTs\Edit.cshtml" />
+    <None Include="Views\ProductTs\Index.cshtml" />
+    <None Include="Views\ProductVs\Create.cshtml" />
+    <None Include="Views\ProductVs\Delete.cshtml" />
+    <None Include="Views\ProductVs\Details.cshtml" />
+    <None Include="Views\ProductVs\Edit.cshtml" />
+    <None Include="Views\ProductVs\Index.cshtml" />
+    <None Include="Views\Providers\Create.cshtml" />
+    <None Include="Views\Providers\Delete.cshtml" />
+    <None Include="Views\Providers\Details.cshtml" />
+    <None Include="Views\Providers\Edit.cshtml" />
+    <None Include="Views\Providers\Index.cshtml" />
+    <None Include="Views\Sales\Create.cshtml" />
+    <None Include="Views\Sales\Delete.cshtml" />
+    <None Include="Views\Sales\Details.cshtml" />
+    <None Include="Views\Sales\Edit.cshtml" />
+    <None Include="Views\Sales\Index.cshtml" />
+    <None Include="Views\Stuffs\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeLibs Remove="MyClassDiagram.cd" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeLibs Remove="Controllers\StuffsController.cs" />
+  </ItemGroup>
+
+</Project>

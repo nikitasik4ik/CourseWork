@@ -1,0 +1,36 @@
+﻿@model IEnumerable<CourseWork.Models.Country>
+
+@{
+    ViewData["Title"] = "Список";
+}
+
+<h1>Список</h1>
+
+<p>
+    <a asp-action="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NameCountry)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NameCountry)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CountryId">Редактировать</a> |
+                    <a asp-action="Details" asp-route-id="@item.CountryId">Детали</a> |
+                    <a asp-action="Delete" asp-route-id="@item.CountryId">Удалить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

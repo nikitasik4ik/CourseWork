@@ -1,0 +1,30 @@
+﻿@model CourseWork.Models.ProductV
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ProductV</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NameView)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NameView)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Type.NameType)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ViewId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Analyst Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Страница Аналитика</h1>
+
+<p>Добро пожаловать, Аналитик!</p>
+
+<a href="@Url.Action("BestEmployee", "Sales")" class="btn btn-primary">Лучший сотрудник</a>
+<a href="@Url.Action("GenerateReport", "Sales")" class="btn btn-primary">Сгенерировать отчёт</a>
+<a href="@Url.Action("TopSellingProducts", "Sales")" class="btn btn-primary">Сгенерировать отчёт</a>

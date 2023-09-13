@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h2>Выберите свою роль</h2>
+    <form method="post" asp-action="VerifyAccess" class="form">
+        <div class="form-group">
+            <label for="role">Роль:</label>
+            <select name="role" id="role" class="form-control">
+                <option value="Manager">Менеджер</option>
+                <option value="Administrator">Администратор</option>
+                <option value="Analyst">Аналитик</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="accessCode">Код доступа:</label>
+            <input type="password" name="accessCode" id="accessCode" class="form-control" placeholder="Введите код доступа" />
+        </div>
+        <button type="submit" class="btn btn-primary">Войти</button>
+    </form>
+</div>
+
+<style>
+    .form {
+        display: inline-block;
+        margin-top: 20px;
+    }
+</style>

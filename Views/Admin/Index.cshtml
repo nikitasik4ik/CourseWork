@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Admin Page";
+}
+
+<h1>Страница Администратора</h1>
+
+<p>Добро пожаловать, Администратор!</p>
+
+<div class="button-grid">
+    <a href="~/Clients/Index" class="btn btn-primary">Перейти к странице Клиенты</a>
+    <a href="~/Countries/Index" class="btn btn-primary">Перейти к странице Страны</a>
+    <a href="~/Posts/Index" class="btn btn-primary">Перейти к странице Должности</a>
+    <a href="~/Products/Index" class="btn btn-primary">Перейти к странице Продукты</a>
+    <a href="~/ProductTs/Index" class="btn btn-primary">Перейти к странице Тип продукта</a>
+    <a href="~/ProductVs/Index" class="btn btn-primary">Перейти к странице Вид продукта</a>
+    <a href="~/Providers/Index" class="btn btn-primary">Перейти к странице Поставщики</a>
+    <a href="~/Sales/Index" class="btn btn-primary">Перейти к странице Продажи</a>
+    <a href="~/Stuffs/Index" class="btn btn-primary">Перейти к странице Сотрудники</a>
+</div>
+
+<style>
+    .button-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+</style>

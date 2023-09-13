@@ -1,0 +1,66 @@
+﻿@model IEnumerable<CourseWork.Models.Client>
+
+@{
+    ViewData["Title"] = "Список";
+}
+
+<h1>Список</h1>
+
+<p>
+    <a asp-action="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstNameClient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastNameClient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatronomykClient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneClient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstNameClient)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastNameClient)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PatronomykClient)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateBirth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneClient)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ClientId">Редактировать</a> |
+                    <a asp-action="Details" asp-route-id="@item.ClientId">Детали</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ClientId">Удалить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

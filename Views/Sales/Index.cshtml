@@ -1,0 +1,70 @@
+﻿@model IEnumerable<CourseWork.Models.Sale>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Список продаж</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-outline-primary">Создать новую</a>
+    <a asp-action="GenerateReport" class="btn btn-outline-success">Сгенерировать отчет</a>
+    <a asp-action="BestEmployee" class="btn btn-outline-info">Лучший сотрудник</a>
+    <a asp-action="TopSellingProducts" class="btn btn-outline-info">Лучший товар</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Дата продажи
+            </th>
+            <th>
+                Количество
+            </th>
+            <th>
+                Клиент
+            </th>
+            <th>
+                Продукт
+            </th>
+            <th>
+                Сотрудник
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateSale)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Client.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.Brand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Stuff.FullNameStuff)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.SaleId" class="btn btn-primary">Редактировать</a>
+                    <a asp-action="Details" asp-route-id="@item.SaleId" class="btn btn-warning">Детали</a>
+                    <a asp-action="Delete" asp-route-id="@item.SaleId" class="btn btn-danger">Удалить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .btn-custom {
+        background-color: #ff00ff; /* цвет на ваш выбор */
+    }
+</style>
